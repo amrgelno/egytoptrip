@@ -1,0 +1,58 @@
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews -Indexes
+    </IfModule>
+
+    RewriteEngine On
+
+    RewriteRule ^site_map.xml?/?$ site_map.php
+    RewriteRule ^/vendor/livewire/livewire.js?$ http://localhost/DMOTOURS/vendor/livewire/livewire.js
+
+    # Redirect Trailing Slashes If Not A Folder...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} (.+)/$
+    RewriteRule ^ %1 [L,R=301]
+
+
+    
+    # Send Requests To Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+	
+    ExpiresActive On
+    ExpiresDefault "access plus 1 month"
+
+    # Images
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/x-icon "access plus 1 year"
+
+    # CSS and JavaScript
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+
+    # Other static assets
+    ExpiresByType application/pdf "access plus 1 month"
+    ExpiresByType application/x-shockwave-flash "access plus 1 month"
+
+        # Set Cache-Control for specific file types
+    <FilesMatch "\.(css|js|jpg|jpeg|png|gif|ico|svg|webp)$">
+        Header set Cache-Control "public, max-age=2592000" # 30 days
+    </FilesMatch>
+
+    # Example for HTML files (often cached for shorter periods)
+    <FilesMatch "\.(html|htm)$">
+        Header set Cache-Control "public, max-age=3600, must-revalidate" # 1 hour
+    </FilesMatch>
+
+
+
+	<Files ~ "\.(env|json|config.js|md|gitignore|gitattributes|lock)$">
+		Order allow,deny
+		Deny from all
+    </Files>
+</IfModule>

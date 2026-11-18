@@ -1,0 +1,1 @@
+import{Swiper}from"./swiper-bundle.min.js";export function Swiper1(){new Swiper(".swiperpricecard",{autoplay:{delay:2e3},direction:"horizontal",speed:300,loop:!0,pagination:{el:".swiper-pagination"},navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"},slidesPerView:1,spaceBetween:30,breakpoints:{750:{slidesPerView:2},999:{slidesPerView:4}}})}

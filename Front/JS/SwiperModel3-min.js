@@ -1,0 +1,3 @@
+import{Swiper}from"./swiper-bundle.min.js";export function Swiper3(){new Swiper(".swiperpartner",{direction:"horizontal",speed:800,loop:!0,pagination:{el:".swiper-pagination"},navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"},spaceBetween:30,breakpoints:{750:{slidesPerView:2},999:{slidesPerView:3}}})}
+//https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.mjs
+//./swiper-bundle.min.js

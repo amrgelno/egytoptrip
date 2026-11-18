@@ -1,0 +1,215 @@
+<footer class="site-footer container" id='FooterCss' :style="{ background: Footercolor }" dir='ltr'>
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-3 col-12 mb-4" v-for="(data,i) in Maxcompanyid" :key="data.id">
+                <img :src="'Front/IMG/' + data.path_pic" class="logo img-fluid" :alt="data.path_pic">
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-12 mb-4">
+                <img src="Front/IMG/R.png" width=150px' height='50px'>
+
+                @include('layouts.FrontCDN.framework.vue.Blog_Hero.weather-card')
+
+
+                <h5 class="site-footer-title mb-3">Quick Links</h5>
+
+                @include('layouts.FrontCDN.framework.vue.page_Editor.nav')
+
+                <ul class="footer-menu">
+
+                    <li class="footer-menu-item" v-for="(navitem,i) in nav" :key="navitem.id"
+                        v-if="navitem.Active == 'footer'">
+
+                        <a class="footer-menu-link"
+                            :href="'index.php?MainM_ID=' + navitem.id + '&lang=' + lang">
+
+<span    v-if="lang  == 'en_gb'">@{{ navitem.sub1menu }}
+                            </span>
+                            <span v-if="lang  == 'ar'">@{{ navitem.Ar_sub1menu }} </span>
+
+                        </a>
+
+
+                    </li>
+
+
+                </ul>
+
+
+
+
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-12 mx-auto">
+                <img src="Front/IMG/R.png" width=100px' height='50px'>
+                <h5 class="site-footer-title mb-3">Contact Infomation</h5>
+
+
+                @include('layouts.FrontCDN.framework.vue.page_Editor.company')
+
+
+                <p class="text-white d-flex mb-2">
+
+                <div v-for="(data,i) in Maxcompanyid" :key="data.id">
+
+                    <i class="bi-telephone me-2" style='color:white;'></i>
+
+                    <a href="tel: 120-240-9600" class="site-footer-link">
+                        @{{ data.Tele_Number }}
+                    </a>
+                    </p>
+
+                    <p class="text-white d-flex">
+                        <i class="bi-envelope me-2"></i>
+
+                        <a href="'mailto:'+data.Email" class="site-footer-link">
+                            @{{ data.Email }}
+                        </a>
+                    </p>
+
+                    <p class="text-white d-flex mt-3">
+                        <i class="bi-geo-alt me-2"></i>
+                        @{{ data.Address }}
+                    </p>
+
+                    </template>
+
+                    <!-- <a href="#" class="custom-btn btn mt-3">Get Direction</a>-->
+                </div>
+            </div>
+        </div>
+
+        <div class="site-footer-bottom">
+            <div class="container">
+                <div class="row">
+
+
+
+
+                    <div class="col-lg-6 col-md-7 col-12 ">
+
+
+
+                        <img src="Front/IMG/shape2.webp" width='50px' height='40px'>
+
+                        <p v-for="(data,i) in Maxcompanyid" :key="data.id" class="mb-0">Copyright
+                            ©
+                            2036 <a href="#"> @{{ data.Comp_Name }}</a>
+                            Design: <a href="https://Designstore.online" target="_blank"> Designstore</a></p>
+                    </div>
+
+
+                    <div class="col-lg-3 col-md-3  d-flex">
+
+
+
+                        <ul class="social-icon">
+
+
+
+                            <li class="social-icon-item" v-for="(data,i) in social" :key="data.id">
+                                <a :href="data.links"><img :src="'Front/IMG/' + data.social_icon"
+                                        style="width:50px; height:50px;"></a>
+                            </li>
+
+
+                        </ul>
+                    </div>
+
+
+{{--
+                    <div class="col-lg-2 col-md-2    d-flex justify-content-center align-items-center mx-auto">
+
+
+
+                        @include('layouts.FrontCDN.framework.vue.Blog_Hero.socialmedia-wedget')
+
+
+                    </div> --}}
+
+
+                </div>
+            </div>
+
+
+
+            <div v-if="Admin_user  != '' ">
+
+                <input type="color" name="Footercolor" class="hint--left" id='Footercolor' aria-label="Footercolor"
+                    v-model='Footercolor' onchange='changeFootercolor();'>
+            </div>
+
+        </div>
+        <!-- <label> Language: </label> -->
+
+        <!--<form name='Typography'  action='{{ route('index') }}'  method='get' >
+
+@csrf
+
+<select name="lang"   class="autosubmit"   lang="en"  dir="ltr" id="sel-lang">
+
+<option value="ar">العربية - Arabic</option>
+<option value="en_gb">English (United Kingdom)</option>
+
+
+
+
+  </select>
+
+
+  <input type='submit' value='ok'>
+
+</form>
+
+-->
+
+        @include('layouts.FrontCDN.framework.vue.Blog_Hero.WebWidget')
+
+
+
+
+        {{-- @include('layouts.FrontCDN.framework.vue.Blog_Hero.GoogletranslateModel2') --}}
+
+
+
+
+</footer>
+
+
+@if (auth::guard('admin')->check())
+    <script type="text/javascript">
+        function changeFootercolor(e) {
+
+
+            $.ajax({
+
+                method: "GET",
+
+                url: "{{ route('QuikEditstyle') }}",
+
+                data: {
+
+                    Footercolor: $('#Footercolor').val(),
+
+
+                },
+
+
+
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+
+                success: function(data, status) {
+                    console.log(data);
+                    console.log(status);
+                    console.log(xhr);
+                }
+
+            });
+
+
+        }
+    </script>
+@endif

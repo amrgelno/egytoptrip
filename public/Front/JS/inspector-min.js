@@ -1,0 +1,1 @@
+document.addEventListener("contextmenu",(e=>{e.preventDefault()}),!1),document.addEventListener("keydown",(e=>{(e.ctrlkey||123==e.keycode)&&(e.preventDefault(),e.stopPropagation())}));
