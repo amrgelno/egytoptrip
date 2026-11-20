@@ -178,6 +178,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 
 </body>
-@livewireScripts()
+@livewireScriptConfig
+<script src="{{ asset('vendor/livewire/livewire.js')}}" defer></script>
 
 </html>
