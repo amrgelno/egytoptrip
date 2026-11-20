@@ -14,8 +14,11 @@ class AppServiceProvider extends ServiceProvider
     {
     $this -> app -> bind('path.app', function()
 {
-        return base_path('./app/indeex.php');
+        return base_path('./app');
 });
+
+
+  
     
     }
 
@@ -26,5 +29,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+
+ if (app()->environment('production')) {
+        URL::forceScheme('https');
+    }
+      
+        
     }
 }
