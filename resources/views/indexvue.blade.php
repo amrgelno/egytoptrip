@@ -4,7 +4,7 @@
 <body   data-aos-easing="ease"  data-aos-duration="200"  data-aos-delay="500"  onload="showResult();"  >
   @if (@$_GET['MainM_ID']or@$_GET['box_ID'] )@include('layouts.FrontCDN.framework.vue.Loading-screen')@endif
 <div id="app" v-cloak>@if (auth::guard('admin')->check())@component('vue_component')@endcomponent @else @php
-require_once'Front/Html/vue/Build/index-min.vue';    /*vue Build  SPA DESIGN PATTERN*/ @endphp @endif </div>
+require_once'./Front/Html/vue/Build/index-min.vue';    /*vue Build  SPA DESIGN PATTERN*/ @endphp @endif </div>
 </body>
 
 
