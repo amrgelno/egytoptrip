@@ -74,8 +74,6 @@ foreach ($boxIDMin as $Minitem){
 
 
 
-
-
    $client_commentMax=client_comment::where ('status','Active')->whereRaw('id = (select Max(id)from client_comment where  status="Active" )')->get();
 
     $client_commentMin=client_comment::where ('status','Active')->whereRaw('id < (select Max(id)from client_comment where  status="Active")')->get();
