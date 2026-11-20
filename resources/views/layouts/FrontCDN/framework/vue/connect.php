@@ -2,10 +2,10 @@
 abstract class condb {
   // Properties    cannot creat object
 
-  protected $localhost='127.0.0.1';
-  protected $password='';
-  protected $dbuser='root';
-  protected $db2='egypttoptrip';
+  protected $localhost='db.fr-roub1.bengt.wasmernet.com:20184';
+  protected $password='pw_W4Y0BYC75fxTmfZOXrQv5cXMFaFMqW5A';
+  protected $dbuser='user_68e6d6b8';
+  protected $db2='db_a9db95dd';
 
   // Methods
  public function connectF() {
