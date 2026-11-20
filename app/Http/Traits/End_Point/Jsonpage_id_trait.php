@@ -94,7 +94,7 @@ foreach ($boxIDMin as $Minitem){
 
           $gallery=gallery::get();
 
-          $Maxcompany_id=company::Max('id')->get();
+          $Maxcompany_id=company::Max('id');
 
            $Maxcompanyid=company::whereRaw('id = (select max(id)from companies)')->get();
 
