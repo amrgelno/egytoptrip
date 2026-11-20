@@ -3,7 +3,7 @@
 
 @php
 
-include 'resources/views/layouts/FrontCDN/framework/vue/connect.php';
+include './resources/views/layouts/FrontCDN/framework/vue/connect.php';
 
 class MetaTag extends condb
 {
@@ -15,7 +15,7 @@ class MetaTag extends condb
         $boxquery = $this->connectF()->query($selector);
 
         while ($column = mysqli_fetch_object($boxquery)) {
-            include 'resources/views/layouts/FrontCDN/framework/vue/SEO Markups/Seomarkupmetatag.blade.php';
+            include './resources/views/layouts/FrontCDN/framework/vue/SEO Markups/Seomarkupmetatag.blade.php';
         }
     }
 }
