@@ -12,6 +12,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        
     $this -> app -> bind('path.app', function()
 {
         return base_path('./app');
@@ -30,6 +31,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
 
+        
  if (app()->environment('production')) {
         URL::forceScheme('https');
     }      
