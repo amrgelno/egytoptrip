@@ -23,7 +23,7 @@ require_once'../Front/Html/vue/Build/index-min.vue';    /*vue Build  SPA DESIGN 
 {{-- <script src="Front/JS/rocket-loader.min.js" type="text/javascript" async='true'></script> --}}
 <script src="Front/JS/lazysizes.min.js" type="text/javascript" async='true'></script>
 {{-- <script src="Front/JS/jquery.min.js" type="text/javascript" ></script> --}}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" async="true"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" async="true"></script>
 <script src="Front/JS/animation.js" type="text/javascript"></script>
 <script src="Front/JS/widget.js" type="text/javascript"></script>
 <script src="Front/JS/gt.min.js" type="text/javascript" data-gt-widget-id="43217984" rel="preload"  fetchpriority='low' ></script>
