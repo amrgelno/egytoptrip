@@ -12,7 +12,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-    $this -> app -> bind('path.public', function()
+    $this -> app -> bind('path.app', function()
 {
         return base_path('./app/indeex.php');
 });
