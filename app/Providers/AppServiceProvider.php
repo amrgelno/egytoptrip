@@ -17,24 +17,12 @@ class AppServiceProvider extends ServiceProvider
 {
         return base_path('./app');
 });
-
-
-  
-    
     }
 
-    /**
-     * Bootstrap any application services.
-     *@use Livewire\Livewire;
-     * @return void
-     */
-    public function boot()
+    public function boot(): void
     {
-
-        
- if (app()->environment('production')) {
-        URL::forceScheme('https');
-    }      
-        
+        if (app()->environment('production')) {
+            URL::forceScheme('https');
+        }
     }
 }
