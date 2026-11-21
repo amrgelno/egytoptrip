@@ -1,5 +1,5 @@
 <?php
-
+use Illuminate\Support\Facades\URL; 
 namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 
