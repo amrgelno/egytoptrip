@@ -48,7 +48,7 @@ use Illuminate\Http\Request;
     //return   $data;
 
 
-    $country=@$data['cityName'].','.@$data['countryName'];
+    $country=@$data->cityName.','.@$data->countryName;
 
 
        //$country= location::get($clientIP);
