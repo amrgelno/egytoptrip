@@ -35,5 +35,5 @@
 
 @include('layouts.Front.SEO Markups.Microformats')
 
-<script>   alert('website under construction')    </script>
+
 </head>
