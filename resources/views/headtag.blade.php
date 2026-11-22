@@ -10,6 +10,7 @@
 
 
 @unless($get)
+    
 <script>   alert('website under construction')    </script>
     
 @endunless
