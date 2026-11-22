@@ -15,7 +15,7 @@
 
 #app{
 display:none;
-
+direction: ltr;
 }
 
         .container-fluid {
