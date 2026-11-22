@@ -7,12 +7,12 @@
  <meta name="csrf-token"  content="{{csrf_token()}}"/>      {{--     ajax meta   --}}
 
 
-@if(empty($Get))
+@unless($Get)
 
 
 <script>   alert('website under construction')    M/script>
     
-@endif
+@endunless
 
     
     
