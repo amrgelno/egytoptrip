@@ -26,16 +26,13 @@ require_once'../Front/Html/vue/Build/index-min.vue';    /*vue Build  SPA DESIGN 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" async="true"></script>
 <script src="Front/JS/animation.js" type="text/javascript"></script>
 <script src="Front/JS/widget.js" type="text/javascript"></script>
+<script src="Front/JS/indexalert.js" type="text/javascript"></script>
 <script src="Front/JS/gt.min.js" type="text/javascript" data-gt-widget-id="43217984" rel="preload"  fetchpriority='low' ></script>
 <script src="Front/JS/cdnvue-min.js" type="text/javascript" rel="preload"  fetchpriority='high'  crossorigin></script>
 
 <script src="Front/JS/main.es.js" type="module" fetchpriority='high'  rel='preloader'  crossorigin></script>
 <script src="https://cdn.jsdelivr.net/npm/rocket-loader@2.4.0/build/js/loader.min.js" async="true"></script>
 {{-- <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> --}}
-
-
-<script>   alert('website under construction')    </script>
-
 
 
 @if (!auth::guard('admin')->check())
