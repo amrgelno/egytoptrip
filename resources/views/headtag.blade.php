@@ -5,6 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
  <meta name="csrf-token"  content="{{csrf_token()}}"/>      {{--     ajax meta   --}}
+
+@unless($Get)
+
+
+<script>   alert('website under construction')    M/script>
+    
+@endunless
+    
  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&amp;display=swap" rel="stylesheet">
  {{--  <script src="{{asset('Front/css/phpjs.php')}}" type="text/javascript" defer=""></script>  --}}
  {{-- Dynamic Media Query --}}
