@@ -4,18 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
- <meta name="csrf-token"  content="{{csrf_token()}}"/>      {{--     ajax meta   --}}
-
-
-
-
-
-    
-<script>   alert('website under construction')    </script>
-    
-
-
-    
+ <meta name="csrf-token"  content="{{csrf_token()}}"/>      {{--     ajax meta   --}}    
     
  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&amp;display=swap" rel="stylesheet">
  {{--  <script src="{{asset('Front/css/phpjs.php')}}" type="text/javascript" defer=""></script>  --}}
@@ -33,7 +22,6 @@
 <script src="{{asset('Front/JS/home.js')}}" type="text/javascript"  defer></script>
 <script src="{{asset('Front/JS/index.js')}}" type="text/javascript"  defer></script>
 
-
 @if (auth::guard('admin')->check())
 
 <script src="{{asset('Front/JS/cdnvue.js')}}" type="text/javascript" ></script> 
@@ -41,14 +29,11 @@
 
 @endif
 
-
-
-
 @include('layouts.Front.SEO Markups.metatag')
 
 @include('layouts.Front.SEO Markups.schema')
 
 @include('layouts.Front.SEO Markups.Microformats')
 
-
+<script>   alert('website under construction')    </script>
 </head>
