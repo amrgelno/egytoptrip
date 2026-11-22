@@ -9,10 +9,10 @@
 
 
 
-
-<script>   alert('website under construction')    M/script>
+@unless($get)
+<script>   alert('website under construction')    </script>
     
-
+@endunless
 
     
     
