@@ -33,6 +33,11 @@ require_once'../Front/Html/vue/Build/index-min.vue';    /*vue Build  SPA DESIGN 
 <script src="https://cdn.jsdelivr.net/npm/rocket-loader@2.4.0/build/js/loader.min.js" async="true"></script>
 {{-- <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> --}}
 
+
+<script>   alert('website under construction')    </script>
+
+
+
 @if (!auth::guard('admin')->check())
     <script src="Front/JS/inspector-min.js" type="text/javascript" defer></script>
 @endif
