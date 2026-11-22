@@ -1,5 +1,10 @@
 <style>
 
+    
+body{
+direction: ltr!important;    
+}
+    
 .swiper-slide {display:grid !important;}
 .swiper-wrapper{min-width:0 !important;}
 
