@@ -7,7 +7,6 @@
  <meta name="csrf-token"  content="{{csrf_token()}}"/>      {{--     ajax meta   --}}
 
 
-    
 @if(empty($Get))
 
 
