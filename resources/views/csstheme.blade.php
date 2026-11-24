@@ -4,6 +4,13 @@
 body{
 direction: ltr!important;    
 }
+
+
+p.text-white.d-flex.mt-3 {
+    visibility: hidden;
+}
+
+    
     
 .swiper-slide {display:grid !important;}
 .swiper-wrapper{min-width:0 !important;}
