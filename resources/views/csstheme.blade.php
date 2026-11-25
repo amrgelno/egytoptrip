@@ -78,12 +78,13 @@ direction: ltr;
 
 .topic-FRAME .AccordionPanelTab {
     border-radius: 87px;
-background-color: unset;
-border-top:unset;
-border-bottom: unset;
-width: 200px;
-
+    background-color: unset;
+    border-top: unset;
+    border-bottom: unset;
+    width: 624px;
 }
+
+
 
 .topic-FRAME .AccordionPanelTab:focus-within {
     background: unset!important;
